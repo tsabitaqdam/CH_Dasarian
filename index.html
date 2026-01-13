@@ -35,8 +35,8 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
-        <script src="data/das_babel_ver_2025012das03_1.js"></script>
-        <script src="data/Kecamatan_Babel_3.js"></script>
+        <script src="data/Kecamatan_Babel_2.js"></script>
+        <script src="data/das_babel_ver_2025012das03_3.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
@@ -120,86 +120,16 @@
                                               {pane: 'pane_Babel_DEM_2menit_0'});
         bounds_group.addLayer(layer_Babel_DEM_2menit_0);
         map.addLayer(layer_Babel_DEM_2menit_0);
-        function pop_das_babel_ver_2025012das03_1(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">pointid</th>\
-                        <td>' + (feature.properties['pointid'] !== null ? autolinker.link(String(feature.properties['pointid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">grid_code</th>\
-                        <td>' + (feature.properties['grid_code'] !== null ? autolinker.link(String(feature.properties['grid_code']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">CH</th>\
-                        <td>' + (feature.properties['CH'] !== null ? autolinker.link(String(feature.properties['CH']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">SH</th>\
-                        <td>' + (feature.properties['SH'] !== null ? autolinker.link(String(feature.properties['SH']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">LAT</th>\
-                        <td>' + (feature.properties['LAT'] !== null ? autolinker.link(String(feature.properties['LAT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">LONG</th>\
-                        <td>' + (feature.properties['LONG'] !== null ? autolinker.link(String(feature.properties['LONG']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_das_babel_ver_2025012das03_1_0() {
-            return {
-                pane: 'pane_das_babel_ver_2025012das03_1',
-                radius: 0.0,
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1,
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(133,182,111,0.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_das_babel_ver_2025012das03_1');
-        map.getPane('pane_das_babel_ver_2025012das03_1').style.zIndex = 401;
-        map.getPane('pane_das_babel_ver_2025012das03_1').style['mix-blend-mode'] = 'normal';
-        var layer_das_babel_ver_2025012das03_1 = new L.geoJson(json_das_babel_ver_2025012das03_1, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_das_babel_ver_2025012das03_1',
-            layerName: 'layer_das_babel_ver_2025012das03_1',
-            pane: 'pane_das_babel_ver_2025012das03_1',
-            onEachFeature: pop_das_babel_ver_2025012das03_1,
-            pointToLayer: function (feature, latlng) {
-                var context = {
-                    feature: feature,
-                    variables: {}
-                };
-                return L.circleMarker(latlng, style_das_babel_ver_2025012das03_1_0(feature));
-            },
-        });
-        bounds_group.addLayer(layer_das_babel_ver_2025012das03_1);
-        map.addLayer(layer_das_babel_ver_2025012das03_1);
-        map.createPane('pane_Analisis_CH_Dasarian_2');
-        map.getPane('pane_Analisis_CH_Dasarian_2').style.zIndex = 402;
-        var img_Analisis_CH_Dasarian_2 = 'data/Analisis_CH_Dasarian_2.png';
-        var img_bounds_Analisis_CH_Dasarian_2 = [[-3.802675,105.108508706],[-1.501246277,108.847853093]];
-        var layer_Analisis_CH_Dasarian_2 = new L.imageOverlay(img_Analisis_CH_Dasarian_2,
-                                              img_bounds_Analisis_CH_Dasarian_2,
-                                              {pane: 'pane_Analisis_CH_Dasarian_2'});
-        bounds_group.addLayer(layer_Analisis_CH_Dasarian_2);
-        map.addLayer(layer_Analisis_CH_Dasarian_2);
-        function pop_Kecamatan_Babel_3(feature, layer) {
+        map.createPane('pane_Analisis_CH_Dasarian_1');
+        map.getPane('pane_Analisis_CH_Dasarian_1').style.zIndex = 401;
+        var img_Analisis_CH_Dasarian_1 = 'data/Analisis_CH_Dasarian_1.png';
+        var img_bounds_Analisis_CH_Dasarian_1 = [[-3.802675,105.108508706],[-1.501246277,108.847853093]];
+        var layer_Analisis_CH_Dasarian_1 = new L.imageOverlay(img_Analisis_CH_Dasarian_1,
+                                              img_bounds_Analisis_CH_Dasarian_1,
+                                              {pane: 'pane_Analisis_CH_Dasarian_1'});
+        bounds_group.addLayer(layer_Analisis_CH_Dasarian_1);
+        map.addLayer(layer_Analisis_CH_Dasarian_1);
+        function pop_Kecamatan_Babel_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['KDPPUM'] !== null ? autolinker.link(String(feature.properties['KDPPUM']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -291,9 +221,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Kecamatan_Babel_3_0() {
+        function style_Kecamatan_Babel_2_0() {
             return {
-                pane: 'pane_Kecamatan_Babel_3',
+                pane: 'pane_Kecamatan_Babel_2',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -306,24 +236,94 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Kecamatan_Babel_3');
-        map.getPane('pane_Kecamatan_Babel_3').style.zIndex = 403;
-        map.getPane('pane_Kecamatan_Babel_3').style['mix-blend-mode'] = 'normal';
-        var layer_Kecamatan_Babel_3 = new L.geoJson(json_Kecamatan_Babel_3, {
+        map.createPane('pane_Kecamatan_Babel_2');
+        map.getPane('pane_Kecamatan_Babel_2').style.zIndex = 402;
+        map.getPane('pane_Kecamatan_Babel_2').style['mix-blend-mode'] = 'normal';
+        var layer_Kecamatan_Babel_2 = new L.geoJson(json_Kecamatan_Babel_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Kecamatan_Babel_3',
-            layerName: 'layer_Kecamatan_Babel_3',
-            pane: 'pane_Kecamatan_Babel_3',
-            onEachFeature: pop_Kecamatan_Babel_3,
-            style: style_Kecamatan_Babel_3_0,
+            dataVar: 'json_Kecamatan_Babel_2',
+            layerName: 'layer_Kecamatan_Babel_2',
+            pane: 'pane_Kecamatan_Babel_2',
+            onEachFeature: pop_Kecamatan_Babel_2,
+            style: style_Kecamatan_Babel_2_0,
         });
-        bounds_group.addLayer(layer_Kecamatan_Babel_3);
-        map.addLayer(layer_Kecamatan_Babel_3);
+        bounds_group.addLayer(layer_Kecamatan_Babel_2);
+        map.addLayer(layer_Kecamatan_Babel_2);
+        function pop_das_babel_ver_2025012das03_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">pointid</th>\
+                        <td>' + (feature.properties['pointid'] !== null ? autolinker.link(String(feature.properties['pointid']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">grid_code</th>\
+                        <td>' + (feature.properties['grid_code'] !== null ? autolinker.link(String(feature.properties['grid_code']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">CH</th>\
+                        <td>' + (feature.properties['CH'] !== null ? autolinker.link(String(feature.properties['CH']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">SH</th>\
+                        <td>' + (feature.properties['SH'] !== null ? autolinker.link(String(feature.properties['SH']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">LAT</th>\
+                        <td>' + (feature.properties['LAT'] !== null ? autolinker.link(String(feature.properties['LAT']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">LONG</th>\
+                        <td>' + (feature.properties['LONG'] !== null ? autolinker.link(String(feature.properties['LONG']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_das_babel_ver_2025012das03_3_0() {
+            return {
+                pane: 'pane_das_babel_ver_2025012das03_3',
+                radius: 0.0,
+                opacity: 1,
+                color: 'rgba(35,35,35,0.001)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(133,182,111,0.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_das_babel_ver_2025012das03_3');
+        map.getPane('pane_das_babel_ver_2025012das03_3').style.zIndex = 403;
+        map.getPane('pane_das_babel_ver_2025012das03_3').style['mix-blend-mode'] = 'normal';
+        var layer_das_babel_ver_2025012das03_3 = new L.geoJson(json_das_babel_ver_2025012das03_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_das_babel_ver_2025012das03_3',
+            layerName: 'layer_das_babel_ver_2025012das03_3',
+            pane: 'pane_das_babel_ver_2025012das03_3',
+            onEachFeature: pop_das_babel_ver_2025012das03_3,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_das_babel_ver_2025012das03_3_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_das_babel_ver_2025012das03_3);
+        map.addLayer(layer_das_babel_ver_2025012das03_3);
         var overlaysTree = [
-            {label: '<img src="legend/Kecamatan_Babel_3.png" /> Kecamatan_Babel', layer: layer_Kecamatan_Babel_3},
-            {label: "Analisis_CH_Dasarian", layer: layer_Analisis_CH_Dasarian_2},
-            {label: '<img src="legend/das_babel_ver_2025012das03_1.png" /> das_babel_ver_2025012das03', layer: layer_das_babel_ver_2025012das03_1},
+            {label: '<img src="legend/das_babel_ver_2025012das03_3.png" /> das_babel_ver_2025012das03', layer: layer_das_babel_ver_2025012das03_3},
+            {label: '<img src="legend/Kecamatan_Babel_2.png" /> Kecamatan_Babel', layer: layer_Kecamatan_Babel_2},
+            {label: "Analisis_CH_Dasarian", layer: layer_Analisis_CH_Dasarian_1},
             {label: "Babel_DEM_2menit", layer: layer_Babel_DEM_2menit_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
@@ -341,15 +341,15 @@
                 return this._bounds;
             }
         });
-        resetLabels([layer_Kecamatan_Babel_3]);
+        resetLabels([layer_Kecamatan_Babel_2]);
         map.on("zoomend", function(){
-            resetLabels([layer_Kecamatan_Babel_3]);
+            resetLabels([layer_Kecamatan_Babel_2]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Kecamatan_Babel_3]);
+            resetLabels([layer_Kecamatan_Babel_2]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Kecamatan_Babel_3]);
+            resetLabels([layer_Kecamatan_Babel_2]);
         });
         </script>        
     </body>
